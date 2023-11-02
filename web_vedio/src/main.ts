@@ -2,6 +2,21 @@ import { createApp } from 'vue'
 import Antd from 'ant-design-vue'
 import './style.css'
 import App from './App.vue'
+import router from './router'
+import {SvgIcon, Loading} from './components/common'
+// import 'virtual:svg-icons-register'
 import 'ant-design-vue/dist/reset.css'
-
-createApp(App).use(Antd).mount('#app')
+import installDirective from './service/directives'
+// import piniaPersist from 'pinia-plugin-persist'
+import { createPinia } from 'pinia'
+const app = createApp(App)
+const pinia = createPinia()
+// pinia.use(piniaPersist)
+app.use(pinia)
+app.use(router)
+app.use(Antd)
+installDirective(app)
+app.component('svg-icon', SvgIcon)
+app.component('loading', Loading)
+app.mount('#app')
+// createApp(App).use(Antd).use(pinia).use(router).mount('#app')
