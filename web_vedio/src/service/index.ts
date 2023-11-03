@@ -6,31 +6,31 @@ const apiRequest = new ApiRequest({
       'Content-Type': 'application/x-www-form-urlencoded',
       Token: localStorage.getItem('token') || ''
   },
-  // interceptors: {
-  //     requestInterceptor: (config) => {
-  //     //携带token拦截
-  //     //解决Object is possibly 'undefined'.
-  //     if (config.headers === undefined) {
-  //       config.headers = {}
-  //     }
-  //     return config
-  //   },
-  //     requestInterceptorCatch: (error) => {
-  //     return error
-  //   },
-  //     responseInterceptor: (res) => {
-  //         // console.log(res);
-  //
-  //         // ElMessage({
-  //         //   message: res.data.msg,
-  //         //   type: 'success'
-  //         // })
-  //     return res
-  //   },
-  //     responseInterceptorCatch: (error) => {
-  //     return error
-  //   }
-  // }
+  interceptors: {
+      requestInterceptor: (config) => {
+      //携带token拦截
+      //解决Object is possibly 'undefined'.
+      if (config.headers === undefined) {
+        config.headers = {}
+      }
+      return config
+    },
+      requestInterceptorCatch: (error) => {
+      return error
+    },
+      responseInterceptor: (res) => {
+          // console.log(res);
+
+          // ElMessage({
+          //   message: res.data.msg,
+          //   type: 'success'
+          // })
+      return res
+    },
+      responseInterceptorCatch: (error) => {
+      return error
+    }
+  }
 })
 
 

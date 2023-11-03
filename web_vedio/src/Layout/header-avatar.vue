@@ -109,8 +109,7 @@ watchEffect(() => {
                         to="/user/self?showTab=post"
                         class="content-center-link"
                     >抖币充值
-                    </router-link
-                    >
+                    </router-link>
                     <div class="footer-item-b"></div>
                   </div>
                 </li>
@@ -131,12 +130,12 @@ watchEffect(() => {
                     <div class="footer-item-b"></div>
                   </div>
                 </li>
-                <li class="huanfu">
-                  <div class="huanfu-content">
-                    <svg-icon class="huanfu-icon" icon="huanfu"/>
-                    <span class="huanfu-title">换肤</span>
-                  </div>
-                </li>
+<!--                <li class="huanfu">-->
+<!--                  <div class="huanfu-content">-->
+<!--                    <svg-icon class="huanfu-icon" icon="huanfu"/>-->
+<!--                    <span class="huanfu-title">换肤</span>-->
+<!--                  </div>-->
+<!--                </li>-->
                 <li class="shezhi">
                   <div class="shezhi-content">
                     <svg-icon class="shezhi-icon" icon="shezhi"/>
@@ -176,7 +175,7 @@ watchEffect(() => {
   padding: 0;
 }
 .right-popover {
-  //background: #fff;
+  background: #fff;
   background: rgba(249, 249, 249, 1);
   border-radius: 4px;
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
@@ -189,7 +188,7 @@ watchEffect(() => {
   right: -2px;
 
   .right-popover-content {
-    // background: #fff;
+     background: #fff;
     background: rgba(249, 249, 249, 1);
     border-radius: 4px;
     box-shadow: none;

@@ -67,7 +67,7 @@ watchEffect(() => {
   z-index: 2;
 }
 .right-container {
-   //width: calc(100% - $sidebar-width);
+   width: calc(100% - $sidebar-width);
   display: flex;
   flex-direction: column;
   flex-grow: 1;
