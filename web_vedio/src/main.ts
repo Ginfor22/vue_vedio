@@ -4,6 +4,9 @@ import './style.css'
 import App from './App.vue'
 import router from './router'
 import {SvgIcon, Loading} from './components/common'
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+
 // import 'virtual:svg-icons-register'
 import 'ant-design-vue/dist/reset.css'
 import installDirective from './service/directives'
@@ -13,6 +16,7 @@ const app = createApp(App)
 const pinia = createPinia()
 // pinia.use(piniaPersist)
 app.use(pinia)
+app.use(ElementPlus)
 app.use(router)
 app.use(Antd)
 installDirective(app)

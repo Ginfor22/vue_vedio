@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, computed, nextTick, watchEffect, watch } from 'vue'
+import { ref, onMounted, computed} from 'vue'
 
 const props = defineProps({
   description: {
@@ -33,9 +33,6 @@ onMounted(() => {
   resizeObserver.observe(spanText.value!)
 })
 
-// watchEffect(() => {
-//   console.log(shouldShowButton.value)
-// })
 const toggleExpand = () => {
   expanded.value = !expanded.value
   // addShow.value = !expanded.value
@@ -81,8 +78,6 @@ const formattedDescription = computed(() => {
   font-size: 14px;
   max-height: 44px;
   line-height: 22px;
-
-  max-height: calc(2 * 22px + 2px);
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   display: -webkit-box;
@@ -97,7 +92,7 @@ const formattedDescription = computed(() => {
     content: '';
     float: right;
     height: calc(100% - 22px + 1px);
-    width: 0px;
+    width: 0;
   }
   &.text-expanded {
     max-height: 748px;
@@ -112,7 +107,6 @@ const formattedDescription = computed(() => {
 }
 
 .btn-content {
-  // margin-left: -4px;
   position: relative;
   height: 20px;
   align-items: center;
@@ -133,7 +127,7 @@ const formattedDescription = computed(() => {
     border-style: none;
     border-color: initial;
     border-image: initial;
-    padding: 0px !important;
+    padding: 0 !important;
     border-radius: 4px;
     cursor: pointer;
   }

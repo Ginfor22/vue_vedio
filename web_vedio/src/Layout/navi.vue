@@ -1,18 +1,14 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-
-// import { watchEffect } from 'vue'
-import {HeaderAvatar} from './index.ts'
+// import { HeaderAvatar } from '../Layout/header-avatar.vue'
+// import { LoginButton } from '../Layout/button/login-button.vue'
+// import {userStore} from "../service/user.ts";
+import SvgIcon from "../components/common/svg-icon.vue";
+import HeaderAvatar from "./header-avatar.vue";
+import LoginButton from "./button/login-button.vue";
 // import { login } from '@/components/auth'
-// import { userStore } from '../service/user.ts'
-import {LoginButton} from './index.ts'
-//切换深色主题
-// const isDark = ref(false)
+// import { userStore } from '@/stores/user'
 
-//切换主题
-// const toggleTheme = () => {
-//   isDark.value = !isDark.value
-// }
 //是否登录
 let isLogin: any = ref(false)
 
@@ -27,6 +23,7 @@ let dialogTableVisible: any = ref(false)
 //     dialogTableVisible.value = false
 //   }
 // })
+//
 
 const handlePost = () => {
   //跳转到发布页面

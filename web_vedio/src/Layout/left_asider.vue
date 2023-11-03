@@ -2,8 +2,8 @@
 import { computed, ref } from 'vue'
 //路由跳转
 import { useRoute, useRouter } from 'vue-router'
+import SvgIcon from "../components/common/svg-icon.vue";
 const router = useRouter()
-
 const activeIndex = ref('2')
 
 interface IRouterIndex {
@@ -41,7 +41,6 @@ console.log(activeMenu.value)
       <div class="aside-top">
         <div class="aside-logo"></div>
       </div>
-
       <div class="aside-container">
         <el-scrollbar>
           <el-menu class="el-menu-container" :default-active="activeMenu">
@@ -79,13 +78,17 @@ console.log(activeMenu.value)
 </template>
 
 <style lang="scss" scoped>
+@import "../assets/styles/global.module";
+@import "../assets/styles/variables";
+@import "../assets/styles/main";
+
 .aside {
   width: $sidebar-width;
   position: fixed;
   .aside-bar {
     width: 100%;
     height: 100vh;
-    background: $color-navigation-bg;
+    background:  rgba(241, 242, 245, 0);
     position: relative;
 
     .aside-top {
@@ -94,13 +97,7 @@ console.log(activeMenu.value)
       position: relative;
       .aside-logo {
         align-items: center;
-        background: linear-gradient(
-                180deg,
-                #eff0f3 80%,
-                rgba(241, 242, 245, 0)
-        );
-        background-image: url(../assets/logo1.svg);
-        background-repeat: no-repeat;
+        background: url(../assets/logo1.svg) no-repeat;
         display: flex;
         flex-basis: 72px;
         justify-content: center;

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, watchEffect } from 'vue'
-
+import AsideBar from '../Layout/left_asider.vue'
+import HeaderNav from '../Layout/header-avatar.vue'
 import { useRouter } from 'vue-router'
 
 // 设置背景颜色
@@ -40,7 +41,6 @@ watchEffect(() => {
       <el-affix class="affix">
         <el-header><header-nav /></el-header>
       </el-affix>
-
       <router-view v-slot="{ Component, route }">
         <component :is="Component" :key="route.path" />
       </router-view>
@@ -63,11 +63,11 @@ watchEffect(() => {
   }
 }
 .el-aside {
-  width: $sidebar-width;
+  width: 25%;
   z-index: 2;
 }
 .right-container {
-  // width: calc(100% - $sidebar-width);
+   //width: calc(100% - $sidebar-width);
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -90,10 +90,10 @@ watchEffect(() => {
 
 @media screen and (max-width: 1240px) {
   .el-aside {
-    width: $sidebar-width-min;
+    width: 10%;
   }
    .affix {
-     width: calc(100% - $sidebar-width-min);
+     width: calc(100% - 10%);
    }
 }
 </style>
