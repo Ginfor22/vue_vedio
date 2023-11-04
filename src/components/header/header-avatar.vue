@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref, watchEffect } from 'vue'
-import SwitchButton from '../Layout/button/switch-button.vue'
-import { userStore } from '../service/user'
-import { videoStore } from '../Layout/videos.ts'
+import SwitchButton from '../button/switch-button.vue'
+import { userStore } from '../../service/user.ts'
+import { videoStore } from '../vedio/videos.ts'
 
 //是否登录
 let isLogin: any = ref(false)
@@ -130,12 +130,6 @@ watchEffect(() => {
                     <div class="footer-item-b"></div>
                   </div>
                 </li>
-<!--                <li class="huanfu">-->
-<!--                  <div class="huanfu-content">-->
-<!--                    <svg-icon class="huanfu-icon" icon="huanfu"/>-->
-<!--                    <span class="huanfu-title">换肤</span>-->
-<!--                  </div>-->
-<!--                </li>-->
                 <li class="shezhi">
                   <div class="shezhi-content">
                     <svg-icon class="shezhi-icon" icon="shezhi"/>
@@ -151,7 +145,7 @@ watchEffect(() => {
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .header-right-avatar {
   width: 32px;
   height: 32px;
@@ -164,8 +158,6 @@ watchEffect(() => {
     user-select: none;
   }
 }
-</style>
-<style lang="scss">
 .el-popover,
 .el-popover.el-popper,
 .el-popper.is-light {

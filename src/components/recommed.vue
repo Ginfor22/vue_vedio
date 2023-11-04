@@ -5,8 +5,8 @@ import {
   ref,
   watchEffect
 } from 'vue'
-import SwiperControl from '../Layout/swiper.vue'
-import SwiperVideo from '../Layout/swiper.vue'
+import SwiperControl from './swiper/swiper.vue'
+import SwiperVideo from './swiper/swiper.vue'
 import type { IFeedParams, IVideoList } from '../service/video_tab.ts'
 import { getVideoList } from '../service/videos.ts'
 import { videosCtrolStore } from '../service/video-control.ts'

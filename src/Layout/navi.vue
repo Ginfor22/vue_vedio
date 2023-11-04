@@ -4,8 +4,8 @@ import { ref } from 'vue'
 // import { LoginButton } from '../Layout/button/login-button.vue'
 // import {userStore} from "../service/user.ts";
 import SvgIcon from "../components/common/svg-icon.vue";
-import HeaderAvatar from "./header-avatar.vue";
-import LoginButton from "./button/login-button.vue";
+import HeaderAvatar from "../components/header/header-avatar.vue";
+import LoginButton from "../components/button/login-button.vue";
 // import { login } from '@/components/auth'
 // import { userStore } from '@/stores/user'
 

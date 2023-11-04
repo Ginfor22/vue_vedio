@@ -6,12 +6,14 @@ import router from './router'
 import {SvgIcon, Loading} from './components/common'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
-
 // import 'virtual:svg-icons-register'
 import 'ant-design-vue/dist/reset.css'
 import installDirective from './service/directives'
-// import piniaPersist from 'pinia-plugin-persist'
 import { createPinia } from 'pinia'
+// import axios from 'axios'
+// import Vue from 'vue'
+// axios.defaults.baseURL = ""
+// Vue.prototype.$axios = axios
 const app = createApp(App)
 const pinia = createPinia()
 // pinia.use(piniaPersist)

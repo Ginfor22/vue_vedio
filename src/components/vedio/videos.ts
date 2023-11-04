@@ -1,4 +1,4 @@
-import type { IVideoList, IVideoParams } from '../service/video_tab.ts'
+import type { IVideoList, IVideoParams } from '../../service/video_tab.ts'
 import {
     getMyFollowVideoList,
     getMyLikeVideoList,
@@ -6,7 +6,7 @@ import {
     getVideoById,
     getVideoByParams,
     getVideoScrollList
-} from '../service/videos.ts'
+} from '../../service/videos.ts'
 // import { ElMessage } from 'element-plus'
 import { defineStore } from 'pinia'
 

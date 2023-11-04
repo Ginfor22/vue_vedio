@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { videosCtrolStore } from '../service/video-control'
-import type { IVideoList } from '../service/video_tab.ts'
+import { videosCtrolStore } from '../../service/video-control.ts'
+import type { IVideoList } from '../../service/video_tab.ts'
 import {
   watchEffect,
   type PropType,
@@ -8,7 +8,7 @@ import {
   onMounted
 } from 'vue'
 import { useElementSize, useThrottleFn } from '@vueuse/core'
-import { useKeyboardNavigation } from '../service/useKeyboardNavigation.ts'
+import { useKeyboardNavigation } from '../../service/useKeyboardNavigation.ts'
 defineProps({
   videoList: {
     type: Array as PropType<IVideoList[]>,

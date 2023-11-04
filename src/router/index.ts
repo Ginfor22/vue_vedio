@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import type { RouteRecordRaw } from 'vue-router'
-import components from '../components/index.vue'
+import components from '../Layout/index.vue'
 const routes: RouteRecordRaw[] = [
     {
         path: '/',
