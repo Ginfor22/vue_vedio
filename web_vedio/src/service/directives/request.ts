@@ -114,21 +114,21 @@ class ApiRequest {
         })
     }
 
-    // get<T>(config: ApiRequestConfig<T>): Promise<T> {
-    //     return this.request<T>({ ...config, method: 'GET' })
-    // }
-    //
-    // post<T>(config: ApiRequestConfig<T>): Promise<T> {
-    //     return this.request<T>({ ...config, method: 'POST' })
-    // }
-    //
-    // delete<T>(config: ApiRequestConfig<T>): Promise<T> {
-    //     return this.request<T>({ ...config, method: 'DELETE' })
-    // }
-    //
-    // patch<T>(config: ApiRequestConfig<T>): Promise<T> {
-    //     return this.request<T>({ ...config, method: 'PATCH' })
-    // }
+    get<T>(config: ApiRequestConfig<T>): Promise<T> {
+        return this.request<T>({ ...config, method: 'GET' })
+    }
+
+    post<T>(config: ApiRequestConfig<T>): Promise<T> {
+        return this.request<T>({ ...config, method: 'POST' })
+    }
+
+    delete<T>(config: ApiRequestConfig<T>): Promise<T> {
+        return this.request<T>({ ...config, method: 'DELETE' })
+    }
+
+    patch<T>(config: ApiRequestConfig<T>): Promise<T> {
+        return this.request<T>({ ...config, method: 'PATCH' })
+    }
 }
 
 export default ApiRequest
