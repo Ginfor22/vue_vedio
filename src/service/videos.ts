@@ -128,7 +128,6 @@ export const getVideoById = (videoId: number) => {
 export const uploadVideo = (
   video: any,
   title: any,
-  desciption: any,
   cover: any,
   status: any
 ) => {
@@ -137,7 +136,6 @@ export const uploadVideo = (
     data: {
       video,
       title,
-      desciption,
       cover,
       status
     },
