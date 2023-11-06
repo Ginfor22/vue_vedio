@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import type { IVideoList } from '../../service/video_tab.ts'
-import { reactive, ref } from 'vue'
+import { reactive } from 'vue'
 import { useRouter } from 'vue-router'
 const router = useRouter()
 // 点击获取数据

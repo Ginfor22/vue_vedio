@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { h, onMounted, reactive, ref, watchEffect } from 'vue'
+import { onMounted, reactive, ref, watchEffect } from 'vue'
 import HotItem from '@/components/discover/hot-item/index.vue'
 import DiscoverItem from '@/components/discover/discover-item/discover-item.vue'
-import { getVideoList } from '@/service/videos/videos'
-import type { IFeedParams, IVideoList } from '@/service/videos/videosType'
+import { getVideoList } from '../service/videos.ts'
+import type { IFeedParams, IVideoList } from '../service/video_tab.ts'
 import { useElementSize } from '@vueuse/core'
 import { useRouter } from 'vue-router'
 import modelPlayer from '@/components/video-player/modal-player.vue'
@@ -35,7 +35,7 @@ const currentWidth = ref(0)
 const sidebarWidth = ref(172)
 //每个子项的宽高
 const itemWidth = ref(0)
-const itemHeight = ref(0)
+// const itemHeight = ref(0)
 //子项个数
 const numItems = ref(5)
 

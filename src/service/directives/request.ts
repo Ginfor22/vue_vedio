@@ -4,8 +4,6 @@ import { ElMessage } from 'element-plus'
 import type { ApiRequestConfig, ApiRequestInterceptors } from '../directives/export'
 
 
-// const DEAFULT_LOADING = true
-
 class ApiRequest {
     instance: AxiosInstance
     interceptors?: ApiRequestInterceptors
@@ -16,8 +14,6 @@ class ApiRequest {
         // 保存基本信息
         this.interceptors = config.interceptors
 
-        // 使用拦截器
-        // 1.从config中取出的拦截器是对应的实例的拦截器
         this.instance.interceptors.request.use(
             // this.interceptors?.requestInterceptor,
             this.interceptors?.requestInterceptorCatch

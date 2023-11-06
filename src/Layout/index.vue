@@ -3,24 +3,6 @@ import { ref, watchEffect } from 'vue'
 import AsideBar from './left_asider.vue'
 import HeaderNav from '../components/header/header-avatar.vue'
 import { useRouter } from 'vue-router'
-
-// 设置背景颜色
-const backgroundColor = ref('none')
-
-// 滚动监听
-window.addEventListener(
-    'scroll',
-    function () {
-      // console.log(window.scrollY)
-      if (window.scrollY > 60) {
-        backgroundColor.value = '#fff'
-      } else {
-        backgroundColor.value = 'none'
-      }
-    },
-    true
-)
-//获取路由地址
 const router = useRouter()
 const my = ref(false)
 watchEffect(() => {
@@ -43,9 +25,7 @@ watchEffect(() => {
       </el-affix>
 
       <router-view v-slot="{ Component, route }">
-        <!-- <keep-alive> -->
         <component :is="Component" :key="route.path" />
-        <!-- </keep-alive> -->
       </router-view>
     </div>
   </div>
@@ -73,7 +53,6 @@ watchEffect(() => {
   z-index: 2;
 }
 .right-container {
-  // width: calc(100% - $sidebar-width);
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -91,7 +70,7 @@ watchEffect(() => {
   position: sticky;
   z-index: 1;
   padding: 0;
-  background-color: v-bind(backgroundColor);
+  background-color: #2f3035;
 }
 
 @media screen and (max-width: 1240px) {

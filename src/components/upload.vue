@@ -1,9 +1,5 @@
 <script setup lang="ts">
-// import { uploadVideo } from '../service/videos.ts'
 import { ref } from 'vue'
-
-//视频上传接口
-
 const textarea = ref('')
 </script>
 <template>

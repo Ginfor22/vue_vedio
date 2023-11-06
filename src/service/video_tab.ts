@@ -1,8 +1,3 @@
-// export interface IVideoList {
-//   page: number
-//   size: number
-//   status?: number
-// }
 
 export interface IVideoList {
   id: number
@@ -34,13 +29,6 @@ export interface IVideoListResult {
   collectCount: number
 }
 
-/**
- * 跟据参数获取视频
- * @param showTab
- * @param page
- * @param size
- * @param userId
- */
 export interface IVideoParams {
   showTab: string
   page: number
@@ -48,12 +36,6 @@ export interface IVideoParams {
   userId?: number
 }
 
-/**
- * 获取分页视频列表
- * @param page
- * @param size
- *
- */
 export interface IFeedParams {
   page: number
   size: number

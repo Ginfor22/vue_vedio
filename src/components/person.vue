@@ -2,7 +2,6 @@
 import {  ref } from 'vue'
 const isDisplay = ref(false)
 const isLogin = ref(false)
-// const router = useRouter()
 </script>
 
 <template>

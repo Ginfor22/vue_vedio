@@ -41,16 +41,12 @@ const getData = async (params: IFeedParams) => {
 }
 
 onMounted(() => {
-  //设置body为possition:fixed
   document.body.style.position = 'fixed'
   control.reset()
 })
-//组件销毁时，去除body的possition:fixed
 onBeforeUnmount(() => {
   document.body.style.position = ''
 })
-//获取路由地址
-// const router = useRouter()
 watchEffect(() => {
   getData({
     page: control.page,

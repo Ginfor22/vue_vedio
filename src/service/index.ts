@@ -8,8 +8,6 @@ const apiRequest = new ApiRequest({
   },
   interceptors: {
       requestInterceptor: (config) => {
-      //携带token拦截
-      //解决Object is possibly 'undefined'.
       if (config.headers === undefined) {
         config.headers = {}
       }
@@ -19,12 +17,6 @@ const apiRequest = new ApiRequest({
       return error
     },
       responseInterceptor: (res) => {
-          // console.log(res);
-
-          // ElMessage({
-          //   message: res.data.msg,
-          //   type: 'success'
-          // })
       return res
     },
       responseInterceptorCatch: (error) => {

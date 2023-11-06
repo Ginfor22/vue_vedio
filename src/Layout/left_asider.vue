@@ -11,7 +11,7 @@ interface IRouterIndex {
 }
 
 const routerIndex: IRouterIndex = {
-  1: '/discover',
+  1: '/find',
   2: '/',
   3: '/follow',
   4: '/user'
@@ -26,11 +26,9 @@ const handleSelect = (index: string) => {
 const route = useRoute()
 const activeMenu = computed(() => {
   const { path } = route
-  // console.log(path.split('/')[1])
   const index = Object.values(routerIndex).findIndex(
       (item) => item === `/${path.split('/')[1]}`
   )
-  // console.log(index)
   return index + 1 + ''
 })
 console.log(activeMenu.value)

@@ -1,5 +1,5 @@
 import type { ElScrollbar } from 'element-plus'
-import { onMounted, watchEffect, type Ref, onUnmounted } from 'vue'
+import { onMounted, type Ref, onUnmounted } from 'vue'
 import { useDebounceFn } from '@vueuse/core'
 
 export const useElScrollbarScroll = (
@@ -19,7 +19,7 @@ export const useElScrollbarScroll = (
           'scroll',
           (event: { target: HTMLElement }) => {
             const target = event.target as HTMLElement
-            console.log('target.scrollTop', target.scrollTop) 
+            console.log('target.scrollTop', target.scrollTop)
             debouncedCallback(target.scrollTop)
           }
         )
@@ -27,11 +27,6 @@ export const useElScrollbarScroll = (
     }
   })
 }
-/**
- * @description: 监听页面滚动
- * @param scrollbarRef 
- * @returns 
- */
 export const useElScroll = (
   scrollbarRef: Ref<HTMLElement | null>,
   callback: (scrollTop: number) => void,
@@ -49,19 +44,11 @@ export const useElScroll = (
         debouncedCallback(target.scrollTop)
         console.log('target.scrollTop', target.scrollTop)
       }
-      
+
       scrollbar.addEventListener('scroll', listener)
     }
   })
 }
-
-
-/**
- * 页面滚动监听 Hook
- * @param targetRef 目标元素的 Ref 对象
- * @param callback 滚动事件回调函数
- * @param wait 回调函数的防抖等待时间（毫秒）
- */
 export const useScroll = (
   targetRef: Ref<HTMLElement | null>,
   callback: (scrollTop: number) => void,

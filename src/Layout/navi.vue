@@ -1,29 +1,28 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import {ref, watchEffect} from 'vue'
 // import { HeaderAvatar } from '../Layout/header-avatar.vue'
-// import { LoginButton } from '../Layout/button/login-button.vue'
-// import {userStore} from "../service/user.ts";
+import {userStore} from "../service/user.ts";
 import SvgIcon from "../components/common/svg-icon.vue";
 import HeaderAvatar from "../components/header/header-avatar.vue";
 import LoginButton from "../components/button/login-button.vue";
 // import { login } from '@/components/auth'
-// import { userStore } from '@/stores/user'
+// import { userStore } from '../service/user.ts'
 
 //是否登录
 let isLogin: any = ref(false)
 
 let dialogTableVisible: any = ref(false)
-// const store = userStore()
+const store = userStore()
 
-// watchEffect(() => {
-//   // console.log(store.isLogin())
-//   isLogin.value = store.isLogin()
-//   //关闭登录弹窗
-//   if (isLogin.value) {
-//     dialogTableVisible.value = false
-//   }
-// })
-//
+watchEffect(() => {
+  // console.log(store.isLogin())
+  isLogin.value = store.isLogin()
+  //关闭登录弹窗
+  if (isLogin.value) {
+    dialogTableVisible.value = false
+  }
+})
+
 
 const handlePost = () => {
   //跳转到发布页面
@@ -50,13 +49,6 @@ const handlePost = () => {
             </div>
           </div>
         </div>
-        <div class="header-right">
-          <div class="header-right-item">
-            <div class="header-right-item-overplay">
-              <svg-icon class="icon" icon="expand" />
-            </div>
-            <p>更多</p>
-          </div>
           <div class="header-right-item">
             <div class="header-right-item-overplay">
               <svg-icon class="icon" icon="client" />
@@ -68,12 +60,6 @@ const handlePost = () => {
               <svg-icon class="icon" icon="collection" />
             </div>
             <p>收藏网页</p>
-          </div>
-          <div class="header-right-item">
-            <div class="header-right-item-overplay">
-              <svg-icon class="icon" icon="cooperation" />
-            </div>
-            <p>合作</p>
           </div>
           <div class="header-right-item">
             <div class="header-right-item-overplay">
@@ -123,7 +109,6 @@ const handlePost = () => {
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <style lang="scss" scoped>

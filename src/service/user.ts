@@ -28,8 +28,8 @@ export let userStore: StoreDefinition<"user", {
     postCode(email: string): Promise<void>;
     login(userInfo: any): Promise<void>
 }>;
-const defineStore1 = defineStore;
-userStore = defineStore1('user',
+const defineStore = defineStore;
+userStore = defineStore('user',
     {
     state: () => ({
         token: localStorage.getItem('token') || '',

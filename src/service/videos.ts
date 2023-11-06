@@ -32,10 +32,6 @@ enum VideoApi {
   getVideoByParams = '/video/self'
 }
 
-/**
- * 跟据参数获取视频
- * @url /video/self
- */
 export function getVideoByParams(params: IVideoParams) {
   return apiRequest.get<IDataType<IVideoListResult>>({
     url: VideoApi.getVideoByParams,
@@ -43,10 +39,6 @@ export function getVideoByParams(params: IVideoParams) {
   })
 }
 
-/**
- * 获取分页视频列表
- * @param IVideoList
- */
 export function getVideoList(params: IFeedParams) {
   return apiRequest.post<IDataType<IVideoList[]>>({
     url: VideoApi.getVideoList,

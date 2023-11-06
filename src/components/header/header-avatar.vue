@@ -105,27 +105,6 @@ watchEffect(() => {
                 </li>
                 <li>
                   <div class="footer-item">
-                    <router-link
-                        to="/user/self?showTab=post"
-                        class="content-center-link"
-                    >抖币充值
-                    </router-link>
-                    <div class="footer-item-b"></div>
-                  </div>
-                </li>
-                <li>
-                  <div class="footer-item">
-                    <router-link
-                        to="/user/self?showTab=post"
-                        class="content-center-link"
-                    >直播伴侣
-                    </router-link
-                    >
-                    <div class="footer-item-b"></div>
-                  </div>
-                </li>
-                <li>
-                  <div class="footer-item">
                     <span>退出登录</span>
                     <div class="footer-item-b"></div>
                   </div>

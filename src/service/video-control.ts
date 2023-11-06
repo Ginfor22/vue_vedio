@@ -22,17 +22,12 @@ export const videosCtrolStore = defineStore('control', () => {
     }
     const handlePrev = () => {
         if (activeVideoIndex.value > 0) {
-            // translateY.value = computeTranslateY(activeVideoIndex.value + 1)
-            //切换到上一个视频
             activeVideoIndex.value = activeVideoIndex.value - 1
         }
         stopScroll.value = false
     }
     const handleNext = () => {
-        //暂停当前视频
         activeVideoPlayState.value = false
-        // translateY.value = computeTranslateY(activeVideoIndex.value + 1)
-        //切换到下一个视频
         activeVideoIndex.value = activeVideoIndex.value + 1
         activeVideoPlayState.value = true
 
@@ -46,7 +41,6 @@ export const videosCtrolStore = defineStore('control', () => {
         translateY.value = computeTranslateY(activeVideoIndex.value)
     })
 
-    //重置状态
     const reset = () => {
         page.value = 1
         size.value = 10
