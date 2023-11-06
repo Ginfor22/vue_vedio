@@ -74,12 +74,6 @@ import {} from 'vue'
                     <div class="footer-item-b"></div>
                   </div>
                 </li>
-                <li class="huanfu">
-                  <div class="huanfu-content">
-                    <svg-icon class="huanfu-icon" icon="huanfu" />
-                    <span class="huanfu-title">换肤</span>
-                  </div>
-                </li>
               </ul>
             </div>
           </ul>
@@ -119,20 +113,15 @@ import {} from 'vue'
   padding: 0;
 }
 .right-popover {
-  //background: #fff;
   background: rgba(249, 249, 249, 1);
   border-radius: 4px;
-  box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
-  box-shadow: rgba(0, 0, 0, 0.1);
   display: block;
   overflow: hidden;
   padding: 8px;
-  padding: 0 !important;
   position: absolute;
   right: -2px;
 
   .right-popover-content {
-    // background: #fff;
     background: rgba(249, 249, 249, 1);
     border-radius: 4px;
     box-shadow: none;
@@ -152,7 +141,6 @@ import {} from 'vue'
 
       .content-header {
         color: rgba(22, 24, 35, 0.34);
-        font-family: PingFang SC;
         font-size: 16px;
         font-style: normal;
         font-weight: 500;
@@ -181,7 +169,6 @@ import {} from 'vue'
             width: 72px;
             align-items: center;
             color: rgba(22, 24, 35, 0.75);
-            color: var(--color-text-t2);
             display: flex;
             font-size: 14px;
             height: auto;
@@ -198,7 +185,6 @@ import {} from 'vue'
             }
             .content-center-num {
               align-items: center;
-              //color: #161823;
               color: rgba(22, 24, 35, 1);
               display: flex;
               font-size: 16px;
@@ -212,7 +198,6 @@ import {} from 'vue'
               }
             }
             .content-center-subtitle {
-              //color: rgba(22, 24, 35, 0.34);
               color: rgba(22, 24, 35, 0.34);
               font-size: 12px;
               line-height: 20px;
@@ -254,7 +239,6 @@ import {} from 'vue'
         margin-left: 24px !important;
       }
       .footer-item {
-        //color: #161823;
         color: rgba(22, 24, 35, 1);
         cursor: pointer;
         font-weight: 400;
@@ -282,29 +266,11 @@ import {} from 'vue'
 
           &::before {
             border-left: 1px solid;
-            //color: #f2f2f4;
             color: RGBA(243, 243, 243, 1);
             content: '';
             height: 12px;
           }
-          .huanfu-title {
-            color: rgba(22, 24, 35, 0.34);
-            font-size: 12px;
-            margin-bottom: -1px;
-          }
         }
-      }
-
-      .huanfu,
-      .shezhi {
-        align-items: center;
-        display: flex;
-        justify-content: flex-start;
-        margin: 24px 16px 24px 0 !important;
-        padding: 0;
-        position: relative;
-        white-space: nowrap;
-        width: 56px;
       }
       .shezhi {
         margin: 24px 16px 24px -8px !important;

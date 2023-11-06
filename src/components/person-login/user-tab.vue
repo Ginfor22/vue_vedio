@@ -13,7 +13,6 @@ const activeName = ref(router.currentRoute.value.query.showTab) as Ref<
   'post' | 'comments' | 'history' | string | undefined | number
 >
 
-// console.log(activeName.value, 'activeName.value')
 const handleClick = (tab: TabsPaneContext) => {
   // console.log(tab.paneName)
   activeName.value = tab.paneName

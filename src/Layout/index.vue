@@ -6,7 +6,7 @@ import { useRouter } from 'vue-router'
 const router = useRouter()
 const my = ref(false)
 watchEffect(() => {
-  if (router.currentRoute.value.path === '/user/self') {
+  if (router.currentRoute.value.path === '../components/recommed') {
     my.value = true
   } else {
     my.value = false
@@ -71,14 +71,5 @@ watchEffect(() => {
   z-index: 1;
   padding: 0;
   background-color: #2f3035;
-}
-
-@media screen and (max-width: 1240px) {
-  .el-aside {
-    width: $sidebar-width-min;
-  }
-  .affix {
-    width: calc(100% - $sidebar-width-min);
-  }
 }
 </style>

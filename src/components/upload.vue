@@ -119,7 +119,6 @@ const textarea = ref('')
         font-style: normal;
         font-weight: normal;
         line-height: 20px;
-        font-weight: bold;
         font-size: 14px;
         color: rgba(28, 31, 35, 0.9);
         text-align: left !important;

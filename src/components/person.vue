@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import {  ref } from 'vue'
+import UserTab from "./person-login/user-tab.vue";
+import LoginCode from "./person-login/login-code.vue";
+import UserItem from "./person-login/user-item.vue";
 const isDisplay = ref(false)
 const isLogin = ref(false)
 </script>
@@ -9,7 +12,7 @@ const isLogin = ref(false)
       <div class="user-detail" :class="{ scrolled: isDisplay }">
         <div class="user-detail-content max">
           <div class="user-header-background"></div>
-          <user-header />
+          <user-item />
           <user-tab />
           <login-code v-if="!isLogin" />
         </div>

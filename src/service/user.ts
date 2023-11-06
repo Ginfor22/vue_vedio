@@ -1,7 +1,8 @@
-// import router from '@/router'
+import router from '@/router'
 import { AuthLogin, PostAuthLogin, PostAuthSendCode } from '../service/auth'
 import { ElMessage } from 'element-plus'
 import {defineStore, StoreDefinition} from 'pinia'
+// import "vue-router/dist/vue-router";
 
 export let userStore: StoreDefinition<"user", {
     userInfo: {
@@ -50,6 +51,11 @@ userStore = defineStore('user',
             createTime: ''
         }
     }),
+        methods:{
+            handle(){
+                this.$router.push('../components/modify')
+            }
+        },
 
     actions: {
         // 设置用户信息, 调用登录接口

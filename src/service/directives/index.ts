@@ -1,4 +1,4 @@
-import {lazy} from './lazy'
+import {lazy} from './lazy.ts'
 
 export default (app: {
     directive: (

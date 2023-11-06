@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import CarouselControls from '@/components/swper/swiper-control.vue'
 
 const loading = ref(false)
 </script>
@@ -8,7 +7,7 @@ const loading = ref(false)
   <div class="follow">
     <Loading :show="loading" :isShowText="true" :center="true">
       <mini-player
-        :url="'http://192.168.227.1:8081/res/458e6bd5-a8cc-492f-a924-e264d7b2eb9e.mp4'"
+        :url="'http://'"
       />
     </Loading>
   </div>

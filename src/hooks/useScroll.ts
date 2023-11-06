@@ -1,6 +1,6 @@
 import type { ElScrollbar } from 'element-plus'
 import { onMounted, type Ref, onUnmounted } from 'vue'
-import { useDebounceFn } from '@vueuse/core'
+import {useDebounceFn} from "@vueuse/core";
 
 export const useElScrollbarScroll = (
   scrollbarRef: Ref<InstanceType<typeof ElScrollbar> | null>,

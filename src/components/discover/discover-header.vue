@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { getCategoriesList } from '@/service/discover/discover'
-import { discoverStore } from '@/stores/discover'
+import { getCategoriesList } from '../discover/index.ts'
 import { ref, watchEffect } from 'vue'
 
 let tagList: any = ref('')
@@ -10,7 +9,6 @@ watchEffect(async () => {
   const data = await getCategoriesList()
   tagList.value = data.data
 })
-// console.log(tagList.value)
 const store = discoverStore()
 //点击切换分类
 const changeTag = (item: any) => {

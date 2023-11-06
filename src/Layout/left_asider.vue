@@ -96,7 +96,7 @@ console.log(activeMenu.value)
       position: relative;
       .aside-logo {
         align-items: center;
-        background: url(../assets/logo1.svg) no-repeat;
+        background: url(../assets/LOGO2.svg) no-repeat;
         display: flex;
         flex-basis: 72px;
         justify-content: center;
@@ -193,7 +193,7 @@ console.log(activeMenu.value)
     .aside-bar {
       .aside-top {
         .aside-logo {
-          background-image: url(../assets/logo.svg);
+          background-image: url(../assets/LOGO2.svg);
           background-repeat: no-repeat;
         }
       }

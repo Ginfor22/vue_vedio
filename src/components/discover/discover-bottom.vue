@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import {} from 'vue'
+import SvgIcon from "../common/svg-icon.vue";
 </script>
 <template>
   <div class="discover-bottom">
-    <!-- <div>查看更多精选视频</div> -->
     <slot></slot>
     <svg-icon class="icon" icon="discover-bottom-arrow" />
   </div>

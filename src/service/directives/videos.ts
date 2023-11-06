@@ -6,7 +6,7 @@ import type {
   IVideoListResult,
   IVideoParams
 } from '../video_tab.ts'
-// import ApiRequest from "./request.ts";
+
 
 enum VideoApi {
   //获取分页视频列表
