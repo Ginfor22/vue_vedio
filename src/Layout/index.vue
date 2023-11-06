@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, watchEffect } from 'vue'
 import AsideBar from './left_asider.vue'
-import HeaderNav from '../components/header/header-avatar.vue'
+import HeaderNav from './navi.vue'
 import { useRouter } from 'vue-router'
 const router = useRouter()
 const my = ref(false)
