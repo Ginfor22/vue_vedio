@@ -6,7 +6,8 @@ import { useRouter } from 'vue-router'
 const router = useRouter()
 const my = ref(false)
 watchEffect(() => {
-  if (router.currentRoute.value.path === '../components/recommed') {
+  //监听变化
+  if (router.currentRoute.value.path === '../user/self') {
     my.value = true
   } else {
     my.value = false
@@ -37,12 +38,13 @@ watchEffect(() => {
 @import "../assets/styles/main";
 .main {
   background-color: #fff;
-  background-position: top;
+  background-position: left;
   background-size: cover;
   display: flex;
   flex-direction: row;
   height: 100vh;
   width: 100%;
+  margin: 0;
 
   &.user {
     height: auto;

@@ -19,12 +19,9 @@ body {
   font-size: 16px;
   transition: color 0.5s, background-color 0.5s;
   line-height: 1.6;
-  text-rendering: optimizeLegibility;
   background: $color-background;
   color: $color-text;
-  // position: fixed;
   min-width: 915px;
-  // overflow-y: overlay;
   user-select: none;
 }
 a {
@@ -50,7 +47,6 @@ ul li {
   font-weight: normal;
 }
 
-//自定义滚动条
 * {
   scrollbar-color: #f2f2f4 transparent;
   scrollbar-width: thin;
@@ -81,7 +77,6 @@ ul li {
 ::-webkit-scrollbar-thumb:hover,
 :hover::-webkit-scrollbar-thumb {
   background: #f2f2f4;
-  // background: rgba(242, 243, 243, 0.08);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -93,15 +88,3 @@ ul li {
   $color-text: $color-text-dark-2;
 }
 
-// @media (min-width: 1024px) {
-//   body {
-//     display: flex;
-//     place-items: center;
-//   }
-
-//   #app {
-//     display: grid;
-//     grid-template-columns: 1fr 1fr;
-//     padding: 0 2rem;
-//   }
-// }

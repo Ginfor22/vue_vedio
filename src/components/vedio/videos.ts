@@ -6,7 +6,7 @@ import {
     getVideoById,
     getVideoByParams,
     getVideoScrollList
-} from '../../service/videos.ts'
+} from '../../service/videos_list.ts'
 // import { ElMessage } from 'element-plus'
 import { defineStore } from 'pinia'
 

@@ -12,10 +12,9 @@ watchEffect(() => {
   isLogin.value = store.isLogin()
   avatar.value = store.userInfo.userAvatar
 })
-export default {
-  methods:{
+function handle(){
 
-  }
+
 }
 </script>
 

@@ -1,4 +1,4 @@
-import { getVideoCommentList } from '../videos'
+import { getVideoCommentList } from '../videos_list.ts'
 import { defineStore } from 'pinia'
 
 export const commentStore = defineStore('comment', {

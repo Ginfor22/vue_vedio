@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { onMounted, reactive, ref, watchEffect } from 'vue'
-import HotItem from '@/components/discover/hot-item/index.vue'
-import DiscoverItem from '@/components/discover/discover-item/discover-item.vue'
-import { getVideoList } from '../service/videos.ts'
+import HotItem from '../components/discover/index.vue'
+import DiscoverItem from '../components/discover/discover-item.vue'
+import { getVideoList } from '../service/videos_list'
 import type { IFeedParams, IVideoList } from '../service/video_tab.ts'
 import { useElementSize } from '@vueuse/core'
 import { useRouter } from 'vue-router'

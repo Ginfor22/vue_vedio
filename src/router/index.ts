@@ -14,12 +14,12 @@ const routes=[
                     {
                         path: '/find',
                         name: 'find',
-                        component: () => import('../components/find.vue')
+                        component: () => import('../interface/find.vue')
                     },
                     {
                         path: '/',
-                        name: 'recommend',
-                        component: () => import('../components/recommed.vue')
+                        name: 'recommed',
+                        component: () => import('../interface/recommed.vue')
                     },
 
                     {
@@ -29,7 +29,7 @@ const routes=[
                         children: [
                             {
                                 path: 'self',
-                                component: () => import('../components/person.vue')
+                                component: () => import('../interface/person.vue')
                             }
                         ]
                     }
@@ -38,7 +38,7 @@ const routes=[
             {
                 path: '/upload',
                 name: 'upload',
-                component: () => import('../components/upload.vue')
+                component: () => import('../interface/upload.vue')
             },
 
 ]

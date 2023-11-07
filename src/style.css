@@ -16,7 +16,7 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #5e5e64;
   text-decoration: inherit;
 }
 a:hover {
@@ -61,7 +61,7 @@ button:focus-visible {
 
 #app {
   max-width: 1280px;
-  margin: 0 auto;
+  margin: 0 ;
   padding: 2rem;
   text-align: center;
 }

@@ -1,23 +1,4 @@
 <script setup lang="ts">
-export default {
-  data(){
-    return{
-      formData:{
-        name:'',
-        email:''
-      }
-    };
-  },
-  methods:{
-    saveData(){
-      if(this.mode === 'add'){
-
-      }else{
-
-      }
-    }
-  }
-}
 </script>
 
 <template>
@@ -28,6 +9,8 @@ export default {
     <input type="text" id="name" v-model:formData.name required>
     <label>邮箱：</label>
     <input type="email" id="name" "v-model:formData.name" required>
+    <label>头像：</label>
+    <input type="Icon" id="name" "v-model:formData.name" required>
 
     <button type="submit">{{mode === 'add' ? '新增' :'保存'}}</button>
   </form>

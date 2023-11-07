@@ -5,10 +5,10 @@ import {
   ref,
   watchEffect
 } from 'vue'
-import SwiperControl from './swiper/swiper.vue'
-import SwiperVideo from './swiper/swiper.vue'
+import SwiperControl from '../components/swiper/swiper.vue'
+import SwiperVideo from '../components/swiper/swiper.vue'
 import type { IFeedParams, IVideoList } from '../service/video_tab.ts'
-import { getVideoList } from '../service/videos.ts'
+import { getVideoList } from '../service/videos_list.ts'
 import { videosCtrolStore } from '../service/video-control.ts'
 import { ElMessage } from 'element-plus'
 // import { useRouter } from 'vue-router'

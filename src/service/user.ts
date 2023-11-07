@@ -1,8 +1,8 @@
 import router from '@/router'
-import { AuthLogin, PostAuthLogin, PostAuthSendCode } from '../service/auth'
-import { ElMessage } from 'element-plus'
+import {AuthLogin, PostAuthLogin, PostAuthSendCode} from '../service/auth'
+import {ElMessage} from 'element-plus'
 import {defineStore, StoreDefinition} from 'pinia'
-// import "vue-router/dist/vue-router";
+import "vue-router/dist/vue-router";
 
 export let userStore: StoreDefinition<"user", {
     userInfo: {
@@ -29,7 +29,6 @@ export let userStore: StoreDefinition<"user", {
     postCode(email: string): Promise<void>;
     login(userInfo: any): Promise<void>
 }>;
-const defineStore = defineStore;
 userStore = defineStore('user',
     {
     state: () => ({

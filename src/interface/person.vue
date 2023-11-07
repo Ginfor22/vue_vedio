@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import {  ref } from 'vue'
-import UserTab from "./person-login/user-tab.vue";
-import LoginCode from "./person-login/login-code.vue";
-import UserItem from "./person-login/user-item.vue";
+import UserTab from "../components/person-login/user-tab.vue";
+import LoginCode from "../components/person-login/login-code.vue";
+import UserItem from "../components/person-login/user-item.vue";
 const isDisplay = ref(false)
 const isLogin = ref(false)
 </script>

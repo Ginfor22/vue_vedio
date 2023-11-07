@@ -126,7 +126,7 @@ watchEffect(() => {
 
 <style lang="scss">
 .header-right-avatar {
-  width: 32px;
+  width: 100%;
   height: 32px;
   margin-left: 16px;
 
