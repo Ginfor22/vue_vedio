@@ -2,7 +2,7 @@
 import {} from 'vue'
 import DiscoverItem from './discover-item.vue'
 import DiscoverBottom from './discover-bottom.vue'
-import { discoverStore } from '@/stores/discover'
+import { discoverStore } from '../discover/discover.ts'
 
 const store = discoverStore()
 console.log(store.categoriesList)

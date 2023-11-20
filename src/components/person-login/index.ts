@@ -1,6 +1,10 @@
-import UserHeader from './user-header/user-header.vue'
-import LoginCode from './login-code/login-code.vue'
-import UserTab from './user-tab/user-tab.vue'
-// import UserFooter from './user-footer/user-footer.vue'
-
-export { UserHeader, LoginCode, UserTab }
+import UserHeader from './user-header.vue'
+import LoginCode from './login-code.vue'
+import UserTab from './user-tab.vue'
+import login from '../../interface/login.vue'
+import UserLike from './user-like.vue'
+import UserPost from './user-post.vue'
+import UserHistory from './user-history.vue'
+import UserCollect from './user-collect.vue'
+import UserFavorites from './user-favorites.vue'
+export { UserHeader, LoginCode, UserTab,login ,UserLike, UserPost, UserHistory, UserCollect, UserFavorites}

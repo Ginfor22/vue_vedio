@@ -1,11 +1,15 @@
 <script setup lang="ts">
-import { ref, watchEffect, type Ref, reactive, onMounted } from 'vue'
-import { UserCollect, UserHistory, UserLike, UserPost } from '.'
+import { ref, watchEffect, type Ref, reactive } from 'vue'
+// import { UserCollect} from './user-collect.vue'
+// import {  UserHistory } from './user-history.vue'
+// import { UserLike} from './user-like.vue'
+// import {  UserPost } from './user-post.vue'`
 import { ElTabPane, ElTabs, type TabsPaneContext } from 'element-plus'
 import { useRoute, useRouter } from 'vue-router'
-import { userStore } from '@/stores/user'
-import { videoStore } from '@/stores/videos'
-import { useScroll } from '@vueuse/core'
+import { userStore } from '../../service/user.ts'
+import { videoStore } from '../vedio/videos.ts'
+import SvgIcon from "../common/svg-icon.vue";
+import Loading from "../common/loading.vue";
 const route = useRoute()
 const router = useRouter()
 
@@ -67,7 +71,6 @@ watchEffect(() => {
           <span class="tab-video-num" v-if="isLogin || tabData.isHide">
             {{ postCount }}
           </span>
-          <!-- <svg-icon icon="lock" class="icon" v-if="tabData.isHide" /> -->
         </template>
 
         <template v-if="isLogin">
@@ -176,9 +179,6 @@ watchEffect(() => {
   }
   :deep(.el-tabs__item.is-active) {
     color: #000;
-  }
-  :deep(.el-tabs__item:hover) {
-    color: none;
   }
   :deep(.el-tabs__nav-wrap::after) {
     height: 0;

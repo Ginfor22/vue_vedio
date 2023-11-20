@@ -1,7 +1,7 @@
 import ApiRequest from './directives/request.ts'
 const apiRequest = new ApiRequest({
-  baseURL: import.meta.env.VITE_BASE_URL,
-  timeout: import.meta.env.VITE_TIMEOUT,
+  // baseURL: import.meta.env.VITE_BASE_URL,
+  // timeout: import.meta.env.VITE_TIMEOUT,
   headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
       Token: localStorage.getItem('token') || ''

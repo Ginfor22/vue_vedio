@@ -38,13 +38,14 @@ watchEffect(() => {
 @import "../assets/styles/main";
 .main {
   background-color: #fff;
+  //background-position: top;
   background-position: left;
   background-size: cover;
   display: flex;
   flex-direction: row;
   height: 100vh;
   width: 100%;
-  margin: 0;
+  //margin: 0;
 
   &.user {
     height: auto;

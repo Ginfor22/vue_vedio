@@ -2,7 +2,6 @@
 import {computed, onMounted, reactive, ref} from 'vue'
 import modelPlayer from './video-player.vue'
 import { useRouter } from 'vue-router'
-// import { videoStore } from '../../service'
 import type { IVideoList } from '../../service/video_tab'
 import SvgIcon from "../common/svg-icon.vue";
 
@@ -61,8 +60,6 @@ const handleModal = (item: IVideoList) => {
   modalData.img = item.userAvatar
   modalData.dianzan = item.likeCount
   modalData.comment = item.commentCount
-  // modalData.shoucang = item.collectCount
-
   modalData.isLike = item.isLike
   modalData.isCollect = item.isCollect
   modalData.isAttention = item.isAttention
@@ -124,10 +121,7 @@ const hideVideo = () => {
 //点击设置modal的显示与隐藏
 const toggleModal = (event: any) => {
   event.preventDefault()
-
   isVideoVisible.value = !isVideoVisible.value
-
-  // 添加路由参数
   router.push({
     query: {
       modal_id: 142,
@@ -214,9 +208,6 @@ const toggleModal = (event: any) => {
     >
       <model-player v-bind="modalData" @closeBtn="handleClose" />
     </el-dialog>
-
-<!--    <Loading v-if="videoStore().bottomLoading" />-->
-<!--    <list-footer v-if="videoStore().isEmpty" />-->
   </div>
 </template>
 
@@ -257,7 +248,6 @@ const toggleModal = (event: any) => {
         justify-content: center;
 
         .item-skeleton {
-          // background: #fff;
           background: rgba(249, 249, 249, 1);
           border-radius: 6px;
           display: flex;

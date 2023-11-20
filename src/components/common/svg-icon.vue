@@ -2,13 +2,11 @@
 import {computed} from 'vue'
 
 const props = defineProps({
-  // 显示的 svg 图标名称（剔除 icon-）
   icon: {
     type: String,
     required: true
   }
 })
-// 真实显示的 svg 图标名（拼接 #icon-）
 const symbolId = computed(() => `#icon-${props.icon}`)
 </script>
 <template>

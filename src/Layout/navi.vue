@@ -1,17 +1,15 @@
 <script setup lang="ts">
 import {ref, watchEffect} from 'vue'
-// import { HeaderAvatar } from '../Layout/header-avatar.vue'
-import {userStore} from "../service/user.ts";
+import {userStore} from "../service/user_login.ts";
 import SvgIcon from "../components/common/svg-icon.vue";
-import HeaderAvatar from "../components/header/header-avatar.vue";
-import LoginButton from "../components/button/login-button.vue";
-// import { login } from '@/components/auth'
+import { HeaderAvatar, LoginButton } from '../components/header/index'
+import { login } from '../components/person-login/index.ts'
 
 //是否登录
 let isLogin: any = ref(false)
 
 let dialogTableVisible: any = ref(false)
-const store = userStore()
+const store = userStore
 
 watchEffect(() => {
   // console.log(store.isLogin())
@@ -108,7 +106,6 @@ const handlePost = () => {
   transition: background-color 0.3s, height 0.4s;
   background-image: none !important;
   width: 100%;
-  height: 100%;
   border-bottom: rgba(231, 231, 236, 0.4) 1px solid;
 
   .header-main {

@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
-//路由跳转
 import { useRoute, useRouter } from 'vue-router'
 import SvgIcon from "../components/common/svg-icon.vue";
+// import SvgIcon from "../components/common/svg-icon.vue";
 const router = useRouter()
 const activeIndex = ref('2')
 
@@ -69,7 +69,7 @@ console.log(activeMenu.value)
             </el-menu-item>
           </el-menu>
         </el-scrollbar>
-
+        //左侧导航栏底部
         <div class="aside-bottom"></div>
       </div>
     </div>
@@ -87,7 +87,7 @@ console.log(activeMenu.value)
   .aside-bar {
     width: 100%;
     height: 100vh;
-    background:  rgba(241, 242, 245, 0);
+    background: rgb(255, 255, 255);
     position: relative;
 
     .aside-top {
@@ -96,7 +96,9 @@ console.log(activeMenu.value)
       position: relative;
       .aside-logo {
         align-items: center;
-        background: url(../assets/LOGO2.svg) no-repeat;
+        background: url(../assets/LOGO2.svg) ;
+        background: rgba(241, 242, 245, 0);
+        //background-repeat: no-repeat;
         display: flex;
         flex-basis: 72px;
         justify-content: center;

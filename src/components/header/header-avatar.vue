@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, watchEffect } from 'vue'
 import SwitchButton from '../button/switch-button.vue'
-import { userStore } from '../../service/user.ts'
+import { userStore } from '../../service/user_login.ts'
 import { videoStore } from '../vedio/videos.ts'
 
 //是否登录
@@ -11,7 +11,7 @@ const store = userStore()
 
 watchEffect(() => {
   // console.log(store.isLogin())
-  isLogin.value = store.$dispose()
+  isLogin.value = store.isLogin()
   src.value = store.userInfo.userAvatar
 })
 </script>
